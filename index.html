@@ -2,24 +2,36 @@
 <html>
 <head>
 	<title>let's watch the film</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style>
-	body {
-		background-image: url("./nilbog_head.png");
-		background-repeat: repeat;
-	}
+		body {
+			background-image: url("./nilbog_head.png");
+			background-repeat: repeat;
+		}
 	</style>	
+	<script>
+		function setRandomColor(){
+			//console.log('rgb(' + Math.random() * 255 + ',' + Math.random()* 255 + ',' + Math.random() * 255 +')');
+			$('p').css('color','rgb(' +Math.random() * 100 +100 + ',' + Math.random()* 100 + 100+',' + Math.random() *255 +')');
+			$('h1').css('color','rgb(' +Math.random() * 100 +100 + ',' + Math.random()* 100 + 100+',' + Math.random() *255 +')');
+			$('span').css('color','rgb(' +Math.random() * 100 +100 + ',' + Math.random()* 100 + 100+',' + Math.random() *255 +')');
+		}
+		$(document).ready(function(){
+			setInterval(setRandomColor);
+		});
+	</script>
 </head>
 
-	<body style="text-align:center;background-color: #222244">
+	<body style="text-align:center;background-color: #daffa8">
 
 
-		<h1 style="color: white;margin-top:100px">NILBOG is here</h1>
+		<h1 style="font-size:3em;margin-top:100px"><span>NILBOG</span> is here</h1>
 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/wZq6LsM3qG4?autoplay=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 		<p style="color:white">Come to the office you'll already be there!</p>
-		<p style="color:white">firday nite</p>
+		<p style="color:white">friday nite</p>
 
 	</body>
 </html>
